@@ -3,7 +3,7 @@ def shop():
     basket = {}
     offer = {
         "apple": {
-            "price": 5,
+            "price": 48,
             "count": 2,
         },
         "banana": {
@@ -28,17 +28,19 @@ def shop():
         if product in offer:
             if offer[product]['count'] != 0:
                 offer[product]['count'] -= 1
-                money -= offer[product]['price']
-                if product in basket:
-                    basket[product]['count'] += 1
+                if (money - offer[product]['price']) >= 0:
+                    money -= offer[product]['price']
+                    if product in basket:
+                        basket[product]['count'] += 1
+                    else:
+                        basket[product] = {'count': 1}
+                    for item in basket:
+                        text += f'{item} у кількості {basket[item]["count"]}, '
+                    print('У вашому кошику зараз ' + text)
                 else:
-                    basket[product] = {'count': 1}
-                for item in basket:
-                    text += f'{item} у кількості {basket[item]["count"]}, '
-
-                print('У вашому кошику зараз ' + text)
+                    print('У вас недостатньо коштів')
             else:
-                print('Я БАГОВ НЕ ДЕЛАЮ')
+                print('Такий товар закінчився, або його немає в нашому асортименті')
         elif product == 'end':
             for item in basket:
                 print(f'Ви придбали {item} в кількості {basket[item]["count"]}')
@@ -49,6 +51,4 @@ def shop():
 
 
 
-
-
-print(shop())
+shop()
