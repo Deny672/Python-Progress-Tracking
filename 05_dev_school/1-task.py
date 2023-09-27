@@ -1,3 +1,11 @@
+"""
+Create a code that returns the sum of all numbers that are multiples of 3
+or 5 that are less than the number you entered.
+
+Alternatively, if the number is negative, print 0.
+
+Remarks: If the number is a multiple of both 3 and 5, count it only once.
+"""
 
 def task(num):
     sum = 0
