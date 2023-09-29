@@ -10,11 +10,9 @@ Remarks: If the number is a multiple of both 3 and 5, count it only once.
 def task(num):
     sum = 0
     while num > 0:
-        if num % 3 == 0 and num % 5 == 0:
-            sum += num
-        elif num % 3 == 0 or num % 5 == 0:
-            sum += num
         num -= 1
+        if num % 3 == 0 or num % 5 == 0:
+            sum += num
     return sum
 
 
