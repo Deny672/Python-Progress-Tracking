@@ -1,8 +1,8 @@
 class A:
-    def Hello(self):
+    def Hello():
         return 'Привет'
-    def World(self):
+    def World():
         return 'Мир!'
 
 
-A.Hello(), A.World()
+print(A.Hello() + " " + getattr(A, 'World')())
