@@ -1,4 +1,4 @@
-list_1 = [1, 1, 2, 2, 4, 4, 4, 4, 4]
+list_1 = [1, 1, 2, 2, 2, 4, 4]
 value_same_num = []
 same_num = []
 k = 0
@@ -15,4 +15,5 @@ for item in range(0, len(value_same_num)):
     if value_same_num[item] > max_value:
         max_value = value_same_num[item]
         k = item
+
 print(same_num[k])
