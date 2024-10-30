@@ -1,3 +1,9 @@
+# In the code below, by overriding the __enter__ and __exit__ 
+# methods, we can change the behavior of the with context manager. 
+# In our case we don't want our initial list to change if an error occurs, 
+# so we create a temporary list 'self.__temp = self.__v[:]' to work with, and 
+# assign the temporary list to the passed one when it finishes without error.
+
 v1 = [1, 2, 3]
 v2 = [2, 3]
 
