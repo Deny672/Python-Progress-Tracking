@@ -6,9 +6,9 @@ def selection_sort(arr):
                 min_value = j
 
         arr[i], arr[min_value] = arr[min_value], arr[i]
-
+        print(arr)
     return arr
 
 
-array = [0, 5, 4, 3, 2, 2]
+array = [4, 5, 2, 8, 6, 3, 1]
 print(selection_sort(array))
